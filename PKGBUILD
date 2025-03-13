@@ -12,7 +12,7 @@ depends=('perl' 'make')
 conflicts=()
 provides=('sketch')
 source=('git+https://github.com/brenopacheco/sketch')
-md5sums=('')
+md5sums=('SKIP')
 
 pkgver() {
 	cd $pkgname && make version
