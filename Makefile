@@ -1,7 +1,7 @@
 .PHONE: help version build install
 
-PREFIX         = /usr
-DESTDIR        = $(shell pwd)/build
+PREFIX  ?= /usr
+DESTDIR ?= $(shell pwd)/build
 
 VERSION=$(shell ./sketch.pl --version | sed 's/^v//')
 GIT_SHA=$(shell git rev-parse --short HEAD)

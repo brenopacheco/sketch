@@ -1,7 +1,7 @@
 # shellcheck disable=all
 
 pkgname=sketch
-pkgver=0
+pkgver=0.0.1
 pkgrel=1
 pkgdesc='Start projects using templates'
 url='https://github.com/brenopacheco/sketch'
@@ -23,5 +23,5 @@ build() {
 }
 
 package() {
-	PREFIX="${pkgdir}/usr" cd $pkgname && make install
+	cd $pkgname && DESTDIR="$pkgdir" make install
 }
