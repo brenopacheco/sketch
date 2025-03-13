@@ -6,7 +6,7 @@ use Getopt::Long qw(GetOptions);
 use Pod::Usage   qw(pod2usage);
 use feature 'say';
 
-my $VERSION = "v0.1";
+my $VERSION = "v0.0.1";
 
 my $man     = 0;
 my $help    = 0;

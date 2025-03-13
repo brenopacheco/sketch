@@ -2,7 +2,7 @@
 
 pkgname=sketch
 pkgver=0
-pkgrel=0
+pkgrel=1
 pkgdesc='Start projects using templates'
 url='https://github.com/brenopacheco/sketch'
 arch=(any)
@@ -12,7 +12,7 @@ depends=('perl' 'make')
 conflicts=()
 provides=('sketch')
 source=('git+https://github.com/brenopacheco/sketch')
-# md5sums=('SKIP')
+md5sums=('')
 
 pkgver() {
 	cd $pkgname && make version
