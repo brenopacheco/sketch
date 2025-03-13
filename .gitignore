@@ -1,4 +1,4 @@
 pkg
 src
 sketch
-*.pkg.tar.zst
+*.tar.*
