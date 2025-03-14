@@ -1,7 +1,7 @@
 #!/usr/bin/env perl
 
-use strict;
-use diagnostics;
+use constant DEBUG => 1;
+use if DEBUG, diagnostics;
 use Getopt::Long qw(GetOptions);
 use Pod::Usage   qw(pod2usage);
 use feature 'say';
@@ -11,6 +11,7 @@ my $VERSION = "v0.0.1";
 my $man     = 0;
 my $help    = 0;
 my $version = 0;
+my $debug   = 0;
 GetOptions(
     'h|help'    => \$help,
     'v|version' => \$version,
@@ -18,6 +19,7 @@ GetOptions(
 ) or pod2usage(2);
 pod2usage(1)               if $help;
 pod2usage( -verbose => 2 ) if $man;
+
 if ($version) {
     say "$VERSION";
     exit 0;
@@ -39,13 +41,17 @@ sketch - Create throwaway project using a language template
 
 =over 4
 
-=item B<--help, -h>
+=item B<-h, --help>
 
 Show usage
 
+=item B<-v, --version>
+
+Show SemVer
+
 =item B<--man>
 
-Open system's man pager with tool documentation
+Open documentation with man pager
 
 =back
 

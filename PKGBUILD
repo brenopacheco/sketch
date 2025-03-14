@@ -11,17 +11,20 @@ options=('!debug')
 depends=('perl' 'make')
 conflicts=()
 provides=('sketch')
-source=('git+https://github.com/brenopacheco/sketch')
-md5sums=('SKIP')
+# source=('git+https://github.com/brenopacheco/sketch')
+# md5sums=('SKIP')
 
 pkgver() {
-	cd $pkgname && make version
+	cd .. && make version
+	# cd $pkgname && make version
 }
 
 build() {
-	cd $pkgname && make build
+	cd .. && make build
+	# cd $pkgname && make build
 }
 
 package() {
-	cd $pkgname && DESTDIR="$pkgdir" make install
+	cd .. && DESTDIR="$pkgdir" make install
+	# cd $pkgname && DESTDIR="$pkgdir" make install
 }
